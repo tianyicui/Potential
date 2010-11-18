@@ -2,7 +2,7 @@
 
 # A script for doing a bunch of compiles
 
-PC=$HOME/bin/pc
+PC=`which pc`
 
 time $PC compile --outdir=Tests --outfile=testArray.S Tests.TestArray
 time $PC compile --outdir=Tests --outfile=testCode.S Tests.TestCode

@@ -18,7 +18,7 @@ Executable pc
   Build-Depends:
         base >= 4.2,
         potential >= 0.1,
-        hint == 0.3.2.3,
+        hint >= 0.3.2.3,
         cmdargs == 0.1,
         mtl >= 1.1,
         ghc >= 6.12,
