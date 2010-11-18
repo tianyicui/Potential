@@ -4,19 +4,19 @@ Requires GHC 6.12 and the Haskell Platform.  Download from:
 
 To build the standard library:
   $ cd libpotential
-  $ runhaskell Setup.lhs configure --prefix=$HOME --user
-  $ runhaskell Setup.lhs build
-  $ runhaskell Setup.lhs install
+  $ cabal configure
+  $ cable build
+  $ cabal install
 
 To build the compiler (this requires the standard library):
   $ cd compiler
-  $ runhaskell Setup.lhs configure --prefix=$HOME --user
-  $ runhaskell Setup.lhs build
-  $ runhaskell Setup.lhs install
+  $ cabal configure
+  $ cable build
+  $ cabal install
 
-This will install the Potential Standard Library into $HOME/lib and the
-Potential Compiler into $HOME/bin.  ghc will be able to use the Potential
+This will install the Potential Standard Library into $HOME/.cabal/lib and the
+Potential Compiler into $HOME/.cabal/bin.  ghc will be able to use the Potential
 Standard Library without any changes to your system configuration; use of
-the Potential Compiler will require you to explicitly reference $HOME/bin/pc
-or modify your system's PATH variable to include $HOME/bin.
-
+the Potential Compiler will require you to explicitly reference $HOME/.cabal/bin/pc
+or modify your system's PATH variable to include $HOME/.cabal/bin (which is highly
+recommended).
